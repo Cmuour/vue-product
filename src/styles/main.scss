@@ -1,1 +1,15 @@
 @import "./normalize.scss";
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.block{
+    width: 100%;
+    display: block;
+}
+
+.in-block{
+    display: inline-block;
+}
