@@ -4,7 +4,14 @@ module.exports = {
     outputDir: process.env.NODE_ENV === 'production' ? 'dist' : 'devdist',
     lintOnSave: false,
     chainWebpack: () => { },
-    configureWebpack: () => { },
+    configureWebpack: (config) => {
+        config.resolve = {  //  配置解析别名
+            extensions: ['.js','.json','.vue'],
+            alias: {
+                '@': path.resolve(__dirname,'./src')
+            }
+        }
+    },
     productionSourceMap: false,
     css: {
         // 是否提取css生成单独的文件 默认 true
